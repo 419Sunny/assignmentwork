@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar and Cards with Animated Background</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* Animated Background */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('images/ww.jpg') no-repeat center center fixed;
+            background-size: cover;
+            /* animation: zoom 30s infinite alternate; */
+        }
+        .welcome-text{
+            font-weight:bold;
+        }
+        /* @keyframes zoom {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        } */
+
+        /* Navbar and Card Styles */
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for cards */
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for navbar */
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background for footer */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-aos="fade-right">TechInnovate Solutions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" data-aos="fade-left">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-transparent text-white py-5" data-aos="fade-down">
+        <div class="container text-center text-light">
+            <h1 class="display-4 welcome-text">Welcome to TechInnovate Solutions</h1>
+            <p class="lead welcome-text">Innovative solutions for a better tomorrow.</p>
+            <marquee behavior="" direction="">WELCOME TO OUR WEBSITE, WHERE YOU CAN EXPLORE A WIDE RANGE OF RESOURCES AND SERVICES DESIGNED TO ENHANCE YOUR EXPERIENCE AND MEET YOUR NEEDS</marquee>
+            <a href="about.php" class="btn btn-warning btn-lg" onclick="alert('Entering the About section of the company website!');">Learn More</a>
+            </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4 " data-aos="fade-right">
+                <div class="card">
+                    <img src="images/qq.jpg" class="card-img-top" alt="Person 1">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Software Engineer with 5+ years of experience.</p>
+                        <a href="#" class="btn btn-warning" onclick="confirmName();">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-up">
+                <div class="card">
+                    <img src="images/aa.jpg" class="card-img-top" alt="Person 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Jane Smith</h5>
+                        <p class="card-text">UI/UX Designer passionate about creating user-friendly.</p>
+                        <a href="#" class="btn btn-warning" onclick="confirmName();">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4"data-aos="fade-up">
+                <div class="card">
+                    <img src="images/bb.jpg" class="card-img-top" alt="Person 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike Johnson</h5>
+                        <p class="card-text">Data Scientist specializing in machine learning and AI.</p>
+                        <a href="#" class="btn btn-warning" onclick="confirmName();">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4" data-aos="fade-left">
+                <div class="card">
+                    <img src="images/ll.jpg" class="card-img-top" alt="Person 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Brown</h5>
+                        <p class="card-text">Project Manager with a track record of successful deliveries.</p>
+                        <a href="#" class="btn btn-warning" onclick="confirmName();">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="images/profile.jpg" class="card-img-top" alt="Person 1">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Software Engineer with 5+ years of experience.</p>
+                        <a href="#" class="btn btn-primary" onclick="confirmName();">View Profile</a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="images/profile.jpg" class="card-img-top" alt="Person 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Jane Smith</h5>
+                        <p class="card-text">UI/UX Designer passionate about creating user-friendly.</p>
+                        <a href="#" class="btn btn-primary" onclick="confirmName();">View Profile</a>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="images/profile.jpg" class="card-img-top" alt="Person 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Mike Johnson</h5>
+                        <p class="card-text">Data Scientist specializing in machine learning and AI.</p>
+                        <a href="#" class="btn btn-primary" onclick="confirmName();">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="images/profile.jpg" class="card-img-top" alt="Person 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Emily Brown</h5>
+                        <p class="card-text">Project Manager with a track record of successful deliveries.</p>
+                        <a href="#" class="btn btn-primary" onclick="confirmName();">View Profile</a>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-transparent text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 TechInnovate Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+function confirmName() {
+    const name = prompt("Please enter your name:");
+    if (name !== null && name.trim() !== "") {
+        const isConfirmed = confirm(`You entered: ${name}. Do you want to proceed to your profile?`);
+        if (isConfirmed) {
+            // Redirect to the profile page
+            window.location.href = 'profile.php'; // Change this to your actual profile page URL
+        }
+    } else {
+        alert("Name is required to view the profile.");
+    }
+}
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+         offset: 120, // offset (in px) from the original trigger point
+  delay: 1000, // values from 0 to 3000, with step 50ms
+  duration: 1000, // values from 0 to 3000, with step 50ms
+  easing: 'ease-in-out', // default easing for AOS animations
+    });
+  </script>
+</body>
+</html>
